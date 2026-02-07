@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Website Sekolah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                🎓 SEKOLAH KITA
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="visi-misi.html">Visi & Misi</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+                <li><a href="ekskul.html">Ekstrakulikuler</a></li>
+                <li><a href="lokasi.html">Lokasi</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Sekolah Kita</h1>
+            <p>Membentuk Generasi Cerdas, Berkarakter, dan Berprestasi untuk Masa Depan Gemilang</p>
+            <a href="profile.html"><button class="cta-button">Kenali Kami Lebih Dekat</button></a>
+        </div>
+    </section>
+
+    <!-- Home Section -->
+    <section class="section active">
+        <h2 class="section-title">Dashboard Sekolah</h2>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <span class="stat-number" id="studentCount">0</span>
+                <span class="stat-label">Siswa Aktif</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" id="teacherCount">0</span>
+                <span class="stat-label">Guru Berkualitas</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" id="achievementCount">0</span>
+                <span class="stat-label">Prestasi</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" id="yearCount">0</span>
+                <span class="stat-label">Tahun Berdiri</span>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3>Kurikulum Unggulan</h3>
+                <p>Menerapkan kurikulum nasional yang disesuaikan dengan kebutuhan zaman, mengintegrasikan teknologi dan nilai-nilai karakter dalam pembelajaran.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👨‍🏫</div>
+                <h3>Tenaga Pengajar Profesional</h3>
+                <p>Didukung oleh guru-guru berkualitas dan berpengalaman yang berkomitmen untuk memberikan pendidikan terbaik bagi siswa.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏆</div>
+                <h3>Prestasi Gemilang</h3>
+                <p>Berbagai penghargaan dan prestasi di tingkat regional maupun nasional dalam bidang akademik, olahraga, dan seni.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sekolah Kita. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Membentuk Generasi Cerdas & Berkarakter</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

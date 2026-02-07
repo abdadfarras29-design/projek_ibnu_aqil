@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Website Sekolah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                🎓 SEKOLAH KITA
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html" class="active">Profil</a></li>
+                <li><a href="visi-misi.html">Visi & Misi</a></li>
+                <li><a href="fasilitas.html">Fasilitas</a></li>
+                <li><a href="ekskul.html">Ekstrakulikuler</a></li>
+                <li><a href="lokasi.html">Lokasi</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                 <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="section active" style="margin-top: 100px;">
+        <h2 class="section-title">Profil Sekolah</h2>
+        <div class="profile-container">
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <h4>Nama Sekolah</h4>
+                    <p>SMA NEGERI PRESTASI</p>
+                </div>
+                <div class="profile-item">
+                    <h4>NPSN</h4>
+                    <p>12345678</p>
+                </div>
+                <div class="profile-item">
+                    <h4>Tahun Berdiri</h4>
+                    <p>1995</p>
+                </div>
+                <div class="profile-item">
+                    <h4>Akreditasi</h4>
+                    <p>A (Unggul)</p>
+                </div>
+                <div class="profile-item">
+                    <h4>Kepala Sekolah</h4>
+                    <p>Dr. Ahmad Budiman, M.Pd</p>
+                </div>
+                <div class="profile-item">
+                    <h4>Status Sekolah</h4>
+                    <p>Negeri</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem;">
+                <h3 style="color: var(--dark-green); margin-bottom: 1rem;">Tentang Kami</h3>
+                <p style="line-height: 1.8; color: var(--text-gray); text-align: justify;">
+                    Sekolah Kita adalah institusi pendidikan yang telah berdiri sejak tahun 1995. Kami berkomitmen untuk memberikan pendidikan berkualitas yang tidak hanya fokus pada aspek akademik, tetapi juga pengembangan karakter, kreativitas, dan kepemimpinan siswa. Dengan fasilitas modern dan tenaga pengajar profesional, kami terus berinovasi untuk menciptakan lingkungan belajar yang kondusif dan inspiratif.
+                </p>
+                <p style="line-height: 1.8; color: var(--text-gray); text-align: justify; margin-top: 1rem;">
+                    Melalui berbagai program unggulan dan kegiatan ekstrakurikuler, kami membentuk generasi yang siap menghadapi tantangan global dengan tetap menjunjung tinggi nilai-nilai luhur bangsa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sekolah Kita. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Membentuk Generasi Cerdas & Berkarakter</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
