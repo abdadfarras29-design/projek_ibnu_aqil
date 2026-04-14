@@ -63,7 +63,7 @@ login-system/
 - ❌ Tidak bisa backup/restore database
 - ❌ Tidak bisa lihat activity logs lengkap
 
-## 🚀 Cara Menggunakan
+## Cara Menggunakan
 
 ### 1. Login
 1. Buka file `login.html`
@@ -115,7 +115,6 @@ requireRole('admin');        // Untuk Admin dan Super Admin
 - Input username dengan validation
 - Input password dengan toggle visibility (👁️)
 - Remember me checkbox
-- Lupa password link
 - Auto-focus dan enter key submit
 
 ### 2. Security Features

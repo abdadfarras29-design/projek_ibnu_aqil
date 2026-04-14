@@ -60,7 +60,7 @@ function showSection(sectionId) {
 function animateCounter(element, target, duration = 2000) {
     let current = 0;
     const increment = target / (duration / 16); // 60fps
-    
+
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
@@ -99,7 +99,7 @@ window.addEventListener('load', () => {
 document.addEventListener('click', (e) => {
     const navMenu = document.getElementById('navMenu');
     const hamburger = document.querySelector('.hamburger');
-    
+
     // Check if click is outside menu and hamburger
     if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
         navMenu.classList.remove('active');
@@ -107,15 +107,52 @@ document.addEventListener('click', (e) => {
 });
 
 /**
- * Handle navigation menu clicks
+ * Handle navigation menu clicks & dropdown toggle
  */
 document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    
+    // Tutup menu mobile saat link diklik
+    const navLinks = document.querySelectorAll('.nav-menu > li > a:not(.dropbtn)');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.remove('active');
+            document.getElementById('navMenu').classList.remove('active');
+        });
+    });
+
+    // ===========================
+    // DROPDOWN CLICK TOGGLE
+    // ===========================
+    const dropbtns = document.querySelectorAll('.dropbtn');
+
+    dropbtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation(); // ← PENTING: cegah event naik ke document
+
+            const dropdown = btn.parentElement;
+            const menu = dropdown.querySelector('.dropdown-content');
+            const isOpen = menu.classList.contains('open');
+
+            // Tutup semua dropdown yang sedang terbuka
+            document.querySelectorAll('.dropdown-content.open').forEach(d => d.classList.remove('open'));
+
+            // Buka/tutup dropdown yang diklik
+            if (!isOpen) {
+                menu.classList.add('open');
+            }
+        });
+    });
+
+    // Klik di mana saja di halaman → tutup semua dropdown
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown-content.open').forEach(d => d.classList.remove('open'));
+        }
+    });
+
+    // Klik pada item dropdown → biarkan navigasi berjalan (jangan tutup sebelum pindah halaman)
+    document.querySelectorAll('.dropdown-content a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.stopPropagation(); // jangan tutup dropdown sebelum navigasi terjadi
         });
     });
 });
@@ -148,7 +185,7 @@ window.addEventListener('scroll', () => {
 function scrollToElement(elementId) {
     const element = document.getElementById(elementId);
     if (element) {
-        element.scrollIntoView({ 
+        element.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });

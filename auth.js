@@ -73,9 +73,9 @@ function handleLogin(event) {
         // Redirect ke dashboard sesuai role
         setTimeout(() => {
             if (user.role === 'super_admin') {
-                window.location.href = 'dashboard-superadmin.html';
+                window.location.href = 'dashboard-superadmin.php';
             } else {
-                window.location.href = 'dashboard-admin.html';
+                window.location.href = 'dashboard-admin.php';
             }
         }, 1000);
         
@@ -136,9 +136,9 @@ function checkExistingSession() {
         const user = JSON.parse(sessionData);
         // Redirect to appropriate dashboard
         if (user.role === 'super_admin') {
-            window.location.href = 'dashboard-superadmin.html';
+            window.location.href = 'dashboard-superadmin.php';
         } else {
-            window.location.href = 'dashboard-admin.html';
+            window.location.href = 'dashboard-admin.php';
         }
     }
 }
@@ -172,7 +172,7 @@ function hasRole(requiredRole) {
 function requireAuth() {
     const user = getCurrentUser();
     if (!user) {
-        window.location.href = 'login.html';
+        window.location.href = 'login.php';
         return false;
     }
     return true;
@@ -186,7 +186,7 @@ function requireRole(role) {
     
     if (!hasRole(role)) {
         alert('Anda tidak memiliki akses ke halaman ini!');
-        window.location.href = 'login.html';
+        window.location.href = 'login.php';
         return false;
     }
     return true;
@@ -199,7 +199,7 @@ function logout() {
     if (confirm('Apakah Anda yakin ingin logout?')) {
         localStorage.removeItem('userSession');
         sessionStorage.removeItem('userSession');
-        window.location.href = 'login.html';
+        window.location.href = 'login.php';
     }
 }
 
@@ -208,7 +208,7 @@ function logout() {
 // ===========================
 
 // Check existing session when login page loads
-if (window.location.pathname.includes('login.html')) {
+if (window.location.pathname.includes('login.php')) {
     checkExistingSession();
 }
 
