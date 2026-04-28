@@ -482,9 +482,9 @@ if($res_fasilitas_query){
                     <span>Lihat Website</span>
                 </a>
 
-                <div style="margin-top: 2rem; text-align: center; padding: 1rem 1rem 2rem 1rem;">
-                    <img src="Screenshot_2026-02-22-13-16-05-58_1c337646f29875672b5a61192b9010f9.png" alt="Logo SMP Ibnu Aqil" style="max-width: 80px; opacity: 0.9; transition: all 0.3s; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    <p style="font-size: 0.8rem; color: #a1a1aa; margin-top: 0.75rem; font-weight: 600; letter-spacing: 0.05em;">SMP IBNU AQIL</p>
+                <div style="margin-top: 2rem; text-align: center; padding: 1rem 1rem 2rem 1rem; perspective: 1000px;">
+                    <img src="Screenshot_2026-02-22-13-16-05-58_1c337646f29875672b5a61192b9010f9.png" alt="Logo SMP Ibnu Aqil" class="logo-interactive" style="cursor: pointer;">
+                    <p style="font-size: 0.8rem; color: #ffffff; opacity: 0.9; margin-top: 0.75rem; font-weight: 700; letter-spacing: 0.05em;">SMP IBNU AQIL</p>
                 </div>
             </div>
         </aside>

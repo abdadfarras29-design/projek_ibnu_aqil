@@ -24,7 +24,7 @@ header("Pragma: no-cache");
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', Tahoma, Geneva, sans-serif;
             background: #f7fafc;
         }
 

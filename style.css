@@ -1,6 +1,8 @@
 /* ===========================
    CSS VARIABLES
    =========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +23,7 @@
    GENERAL STYLES
    =========================== */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', Tahoma, Geneva, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
